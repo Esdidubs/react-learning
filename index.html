@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+  <style>img {
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid black;
+  }
+  
+  header p {
+    font-weight: bold;  
+  }
+  
+  p, address {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 40px;
+    text-decoration: underline;
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+    font-size: 28px;
+    color: blue;
+  }
+  
+  h4 {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+  
+  section p {
+    margin-top: 0;
+  }
+  
+  header p {
+    margin-bottom: 0;
+  }</style>
+</head>
+<body>
+  <div id="application-root"></div>
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+<script type="text/babel">
+ function App(props) {
+  console.log(props)
+  return (
+    <div>
+    <header>
+      <h1>Hello, everyone!</h1>
+      <h1>My Resume</h1>      
+      <h2>Contact Info</h2>
+      <p>Sally Student</p>
+      <address>
+        <a href="mailto:sallystudent@aol.com?subject=Hello%20there,%20Sally">sallystudent@aol.com</a><br/>
+        <a href="tel:+17192662837">719-266-2837</a>
+      </address>
+      <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Doppleganger of Sally Student" />
+    </header>
+    <main>
+      <section>
+        <h2>Education</h2>
+        <h3>Yale University</h3>
+        <p>BA in Art History, 2010-2014</p>
+      </section>
+      <section>
+        <h2>Employment History</h2>
+        <h3>Google</h3>
+        <h4>Images Researcher</h4>
+        <p>12/2018-Present - Search for images that can be used for the daily Google history logo.</p>
+
+        <h3>Amazon</h3>
+        <h4>Professional Shopper</h4>
+        <p>1/2017-11/2018 - Tested out various departments within the Amazon website and app by making small purchases and testing out different payment methods and shipping types.</p>
+      </section>
+    </main>
+    </div>
+  );
+};
+
+ReactDOM.render(
+  <App  />,
+  document.querySelector('#application-root')
+);
+</script>
+</body>
+</html>
